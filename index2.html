@@ -4,51 +4,17 @@
     <meta charset="UTF-8">
     <title>Document</title>
 
-    <style>
-        body {
-            margin: 80px;
-            background: #efefef;
-        }
-
-        p {
-            font-family: sans-serif;
-            font-weight: 400;
-            font-size: 14px;
-        }
-
-        object,
-        svg[is="custom-svg-icon"],
-        custom-html-icon {
-            float: left;
-            margin-right: 20px;
-            border: 2px solid gray;
-        }
-
-        section {
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-
-        svg[is="custom-svg-icon"],
-        custom-html-icon {
-            width: 100px;
-            height: 100px;
-        }
-
-
-    </style>
-
-
-
-
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 
+    <p><strong><a href="index2.html">WebReflections polyfill</a></strong> | <a href="index.html">Webcomponents lite polyfill</a></p>
+
     <div>
         <section>
             <object width="100" height="100" type="image/svg+xml" data="graphic.svg"></object>
-            <p>SVG med fallbackfarge. Firkant skal være oransje dersom nettleseren støtter javascript i svg, ellers er den svart.</p>
+            <p>SVG med with fallback colour. The background should be orange if the browser supports javascript in svg, or else it’s black.</p>
             <pre><code>&lt;object width="100" height="100" type="image/svg+xml" data="graphic.svg"&gt;&lt;/object&gt;</code></pre>
         </section>
 
@@ -56,7 +22,7 @@
             <object width="100" height="100" type="image/svg+xml" data="graphic.svg">
                 <param name="color" value="maroon"/>
             </object>
-            <p>Object-tag med parameter-tagger. Firkant skal være mørkerød.</p>
+            <p>Object-tag with html parameters. The background should be maroon.</p>
 <pre><code>&lt;object width="100" height="100" type="image/svg+xml" data="graphic.svg"&gt;
     &lt;param name="color" value="maroon"/&gt;
 &lt;/object&gt;
@@ -65,20 +31,20 @@
 
         <section>
             <object width="100" height="100" type="image/svg+xml" data="graphic.svg?color=teal"></object>
-            <p>Object-tag med url-paramesectione. Firkant skal være blågrønn.</p>
+            <p>Object-tag with url-paramers. The background should be teal.</p>
             <pre><code>&lt;object width="100" height="100" type="image/svg+xml" data="graphic.svg?color=teal"&gt;&lt;/object&gt;</code></pre>
         </section>
 
         <section>
             <svg is="custom-svg-icon" background-color="pink"></svg>
-            <p>Custom element som extender svg. Firkant skal være rosa. (Funker ikke med WebReflection polyfill)</p>
+            <p>Custom element extending svg. The background should be pink. (Doesn’t work with WebReflections polyfill)</p>
             <pre><code>&lt;svg is="custom-svg-icon" background-color="pink"&gt;&lt;/svg&gt;</code></pre>
         </section>
 
 
         <section>
             <custom-html-icon background-color="violet"></custom-html-icon>
-            <p>Custom element som extender html og inneholder svg. Firkant skal være lilla.</p>
+            <p>Custom element extending html with svg as first child. The background should be violet.</p>
             <pre><code>&lt;custom-html-icon background-color="violet"&gt;&lt;/custom-html-icon&gt;</code></pre>
         </section>
 

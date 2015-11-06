@@ -5,9 +5,12 @@
 
         var doc = document.defaultView;
 
-        var params = doc.frameElement.getElementsByTagName('param');
-
         var color = 'orange';
+
+        var box = document.getElementById('box');
+        box.setAttribute('fill', color);
+
+        var params = doc.frameElement.getElementsByTagName('param');
 
         if (params && params.color && params.color.value) {
             color = params.color.value;
@@ -15,7 +18,6 @@
             color = doc.location.search.match(/(?:color=)([a-z0-9#]+)/)[1];
         }
 
-        var box = document.getElementById('box');
         box.setAttribute('fill', color);
 
     ]]></script>
