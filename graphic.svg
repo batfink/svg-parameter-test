@@ -3,9 +3,17 @@
     <rect id="box" width="100" height="100" fill="black" />
     <script type="text/javascript"><![CDATA[
 
+        console.log('logging from svg');
+
+
         var doc = document.defaultView;
 
+        console.log('document:', doc);
+
         var params = doc.frameElement.getElementsByTagName('param');
+
+
+        console.log('params:', params);
 
         var color = 'orange';
 
