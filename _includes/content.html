@@ -1,0 +1,41 @@
+<div>
+    <section>
+        <object width="100" height="100" type="image/svg+xml" data="graphic.svg"></object>
+        <p>SVG with fallback colour. The background should be orange if the browser supports javascript in svg.</p>
+        <pre><code>&lt;object width="100" height="100" type="image/svg+xml" data="graphic.svg"&gt;&lt;/object&gt;</code></pre>
+    </section>
+
+    <section>
+        <object width="100" height="100" type="image/svg+xml" data="graphic.svg">
+            <param name="color" value="maroon"/>
+        </object>
+        <p>Object-tag with html parameters. The background should be maroon.</p>
+<pre><code>&lt;object width="100" height="100" type="image/svg+xml" data="graphic.svg"&gt;
+&lt;param name="color" value="maroon"/&gt;
+&lt;/object&gt;
+</code></pre>
+    </section>
+
+    <section>
+        <object width="100" height="100" type="image/svg+xml" data="graphic.svg?color=teal"></object>
+        <p>Object-tag with url-paramers. The background should be teal.</p>
+        <pre><code>&lt;object width="100" height="100" type="image/svg+xml" data="graphic.svg?color=teal"&gt;&lt;/object&gt;</code></pre>
+    </section>
+
+    <section>
+        <svg is="custom-svg-icon" background-color="pink" xmlns="http://www.w3.org/2000/svg"></svg>
+        <p>Custom element extending svg. The background should be pink. (Doesn’t work with WebReflections polyfill)</p>
+        <pre><code>&lt;svg is="custom-svg-icon" background-color="pink" xmlns="http://www.w3.org/2000/svg"&gt;&lt;/svg&gt;</code></pre>
+    </section>
+
+
+    <section>
+        <custom-html-icon background-color="violet"></custom-html-icon>
+        <p>Custom element extending html with svg as first child. The background should be violet.</p>
+        <pre><code>&lt;custom-html-icon background-color="violet"&gt;&lt;/custom-html-icon&gt;</code></pre>
+    </section>
+
+
+</div>
+
+<p><a href="https://github.com/batfink/svg-parameter-test">https://github.com/batfink/svg-parameter-test</a></p>

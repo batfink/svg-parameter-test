@@ -2,9 +2,6 @@ var proto = Object.create(SVGElement.prototype);
 
 proto.createdCallback = function() {
 
-    this.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-    this.setAttribute('viewBox', '0 0 100 100');
-
     var box = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
     box.setAttribute('width', 100);
     box.setAttribute('height', 100);

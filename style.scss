@@ -1,3 +1,6 @@
+---
+---
+
 body {
     margin: 80px;
     background: #efefef;
@@ -7,6 +10,9 @@ p {
     font-family: sans-serif;
     font-weight: 400;
     font-size: 14px;
+    a {
+        color: black;
+    }
 }
 
 object,
@@ -26,9 +32,4 @@ svg[is="custom-svg-icon"],
 custom-html-icon {
     width: 100px;
     height: 100px;
-}
-
-a {    
-    color: black;
-    text-transform: uppercase;
 }
