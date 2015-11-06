@@ -2,10 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>{{ page.title }}</title>
 
     <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+
+    <p class="{{ page.path | split: '.md' }}">
+        <a href="index.html">
+            Webcomponents lite polyfill
+        </a> | <a href="index2.html">
+            WebReflections polyfill
+        </a>
+    </p>
