@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 80px;
+            background: #efefef;
+        }
+
+        p {
+            font-family: sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        object {
+            float: left;
+            margin-right: 20px;
+        }
+
+        section {
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <div>
+        <section>
+            <object width="100" height="100" type="image/svg+xml" data="graphic.svg"></object>
+            <p>SVG med fallbackfarge. Firkant skal være oransje dersom nettleseren støtter javascript i svg, ellers er den svart.</p>
+
+            <pre><code>&lt;object width="100" height="100" type="image/svg+xml" data="graphic.svg"&gt;</object></code></pre>
+        </section>
+
+        <section>
+            <object width="100" height="100" type="image/svg+xml" data="graphic.svg">
+                <param name="color" value="maroon"/>
+            </object>
+            <p>Object-tag med parameter-tagger. Firkant skal være mørkerød.</p>
+<pre><code>&lt;object width="100" height="100" type="image/svg+xml" data="graphic.svg"&gt;
+    &lt;param name="color" value="maroon"/&gt;
+&lt;/object&gt;
+</code></pre>
+
+
+
+        </section>
+
+        <section>
+            <object width="100" height="100" type="image/svg+xml" data="graphic.svg?color=teal"></object>
+            <p>Object-tag med url-paramesectione. Firkant skal være blågrønn.</p>
+            <pre><code>&lt;object width="100" height="100" type="image/svg+xml" data="graphic.svg?color=teal"&gt;</object>
+            </code></pre>
+
+
+
+        </section>
+    </div>
+
+</body>
+</html>

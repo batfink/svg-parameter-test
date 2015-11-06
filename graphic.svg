@@ -1,0 +1,21 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <rect id="box" width="100" height="100" fill="black" />
+    <script><![CDATA[
+
+        var doc = document.defaultView;
+
+        var params = doc.frameElement.getElementsByTagName('param');
+
+        var color = 'orange';
+
+        if (params && params.color && params.color.value) {
+            color = params.color.value;
+        } else if (!!doc.location.search && doc.location.search.indexOf('color') !== -1) {
+            color = doc.location.search.match(/(?:color=)([a-z0-9#]+)/)[1];
+        }
+
+        var box = document.getElementById('box');
+        box.setAttribute('fill', color);
+
+    ]]></script>
+</svg>
